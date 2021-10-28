@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/CSS/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Vendors/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="/CSS/sign-in.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-6">
+            <img src="/Images/other/role3.jpeg" width="600px">
+        </div>
+        <div class="col-6">
+            <div class="wrapper">
+                <h2>Sign In</h2>
+                <form name="registration" id="signform" method="POST">
+                    <h4>Account</h4>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="text" name="username" placeholder="Full Name" class="name">
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                        <br><small id="error-username"></small>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="text" name="stagename" placeholder="Stage Name" class="name">
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                        <br><small id="error-stagename"></small>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="email" name="useremail" placeholder="Email Address" class="name">
+                            <i class="bx bx-envelope icon"></i>
+                        </div>
+                        <br><small id="error-email"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="password" name="passid" placeholder="Password" class="name">
+                            <i class="bx bx-key icon"></i>
+                        </div>
+                        <br><small id="error-password"></small>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <button id="sub-btn" type="submit">Sign In</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <h3>Or sign Up Using:</h3>
+                            <ul>
+                                <a href="http://facebook.com">
+                                    <li><i class="bx bxl-facebook-circle"></i></li>
+                                </a>
+                                <a href="http://google.com">
+                                    <li><i class="bx bxl-google"></i></li>
+                                </a>
+                                <a href="http://apple.com">
+                                    <li><i class="bx bxl-apple"></i></li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+                <div class="container">
+                    <h4>| ©Copyright:UGAAMUX 2021 |</h4>
+                </div>
+            </div>
+        </div>
+
+        <script src="/Js/sign-in.js" async defer></script>
+</body>
+
+</html>

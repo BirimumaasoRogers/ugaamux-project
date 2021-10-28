@@ -1,0 +1,16 @@
+{
+  "name": "vendors",
+  "version": "1.0.0",
+  "description": "UGAAMUX Project",
+  "main": "landing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rogers",
+  "license": "MIT",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "eslint": "^8.0.0",
+    "lodash": "^4.17.21"
+  }
+}
