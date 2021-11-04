@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <!-- Vendor CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons/css/boxicons.min.css">
+    <!-- Solo-Login CSS -->
+    <link rel="stylesheet" href="/css/solo-login.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-4">
+            <img src="/Images/Main/African/africandance1.jpeg" width="400px">
+        </div>
+        <div class="col-8">
+            <div class="wrapper">
+                <h2>Registration Form</h2>
+                <form name="registration" id="regform" method="POST" action="/solo-login">
+                    <h4>Account</h4>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="text" name="username" placeholder="Full Name" class="name">
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                        <br><small id="error-username"></small>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="text" name="stagename" placeholder="Stage Name" class="name">
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="email" name="useremail" placeholder="Email Address" class="name">
+                            <i class="bx bx-envelope icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="password" name="passid" placeholder="Password" class="name">
+                            <i class="bx bx-key icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box" style="width: 50%;">
+                            <h4>Date Of Birth</h4>
+                            <input type="text" placeholder="DD" class="dob">
+                            <input type="text" placeholder="MM" class="dob">
+                            <input type="text" placeholder="YYYY" class="dob">
+                            <br><small id="error-dob"></small>
+                        </div>
+                        <div class="input-box" style="width: 50%;">
+                            <h4>Gender</h4>
+                            <input type="radio" id="msex" name="gender" checked class="radio">
+                            <label for="g1">Male</label>
+                            <input type="radio" id="fsex" name="gender" class="radio">
+                            <label for="g2">Female</label>
+                            <br><small id="error-gender"></small>
+                        </div>
+
+                    </div>
+                    <div class="input-group">
+                        <h4>Profile</h4>
+                        <div class="input-box">
+                            <input type="text" name="nin" placeholder="NIN" class="name">
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <h4>Start Date</h4>
+                        <div class="input-box">
+                            <input type="date" name="date" placeholder="" class="name">
+                            <i class="bx bx-calendar-plus icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <h4>Payment Details</h4>
+                            <input type="radio" name="pay" id="p1" checked class="radio">
+                            <label for="p1"><span><i class="bx bxl-mastercard"></i> Credit Card</span></label>
+                            <input type="radio" name="pay" id="p2" class="radio">
+                            <label for="p2"><span><i class="bx bxl-paypal"></i> Paypal</span></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="tel" name="cardno" placeholder="Card Number" class="name">
+                            <i class="bx bx-credit-card icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box" style="width: 50%;">
+                            <input type="tel" name="cardcvc" placeholder="Card CVC" class="name">
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                        <div class="input-box" style="width: 45%; margin-left: 25px;">
+                            <select>
+                                <option>01 Jan</option>
+                                <option>01 Feb</option>
+                                <option>01 Mar</option>
+                            </select>
+                            <select>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <button id="sub-btn" type="submit">SUBMIT</button>
+                            <button id="res-btn" type="reset">RESET</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box" style="text-align: center; margin-left: 60px;">
+                            <h4 id="login-info">Already have an account?<span>   <a class="login-info" href="/sign-in">  Log In</a></span></h4>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Js/solo-login.js"></script>
+    <!-- <script src="/routes/solo-route.js"></script> -->
+    <script src="/models/soloModel.js"></script>
+</body>
+
+</html>

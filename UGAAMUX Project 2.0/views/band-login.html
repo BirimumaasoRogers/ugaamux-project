@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <!-- Vendor CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons/css/boxicons.min.css">
+    <!-- Solo-Login CSS -->
+    <link rel="stylesheet" href="/css/band-login.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-4">
+            <img src="/Images/Main/Sidebar-photo.jpeg" width="500px">
+        </div>
+        <div class="col-8">
+            <div class="wrapper">
+                <h2>Registration Form</h2>
+                <form name="registration" id="regform" method="POST" action="/solo-login">
+                    <h4>Account</h4>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="text" name="bandname" placeholder="Band Name" class="name">
+                            <i class="bx bx-music icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="email" name="useremail" placeholder="Email Address" class="name">
+                            <i class="bx bx-envelope icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="password" name="passid" placeholder="Password" class="name">
+                            <i class="bx bx-key icon"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group">
+                                <h4>Date Of Launch</h4>
+                                <div class="input-box">
+                                    <input type="date" placeholder="date" class="name" name="launch">
+                                    <i class="bx bx-calendar-plus icon"></i>
+                                    <br><small id="error-date"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <h4>Number Of Members</h4>
+                                <div class="input-box">
+                                    <input type="number" id="members" name="members" placeholder="Members" class="name">
+                                    <i class="bx bx-user icon"></i>
+                                    <br><small id="error-member"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <h4>Music Type</h4>
+                        <div class="input-box">
+                            <input type="text" name="genre" placeholder="Genre" class="name">
+                            <i class="bx bx-album icon"></i>
+                            <br><small id="error-genre"></small>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <button id="sub-btn" type="submit">SUBMIT</button>
+                            <button id="res-btn" type="reset">RESET</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box" style="text-align: center; margin-left: 60px;">
+                            <h4 id="login-info">Already have an account?<span>   <a class="login-info" href="/sign-in">  Log In</a></span></h4>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Js/band-login.js"></script>
+    <!-- <script src="/routes/solo-route.js"></script> -->
+    <script src="/models/bandModel.js"></script>
+</body>
+
+</html>

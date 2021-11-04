@@ -1,0 +1,98 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Login
+    meta(name='description' content='')
+    // Vendor CSS
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' type="text/css" href='/css/bootstrap-5.1.0-dist/css/bootstrap.min.css')
+    link(rel='stylesheet' type="text/css" href='/assets/Vendors/boxicons/css/boxicons.min.css')
+    // Solo-Login CSS
+    link(rel='stylesheet' type="text/css"  href='/css/solo-login.css')
+  body
+    .row
+      .col-4
+        img(src='/css/login1.jpeg' width='400px')
+      .col-8
+        .wrapper
+          h2 Registration Form
+          form#regform(name='registration' method='POST' action='/')
+            h4 Account
+            .input-group
+              .input-box
+                input.name(type='text' name='username' placeholder='Full Name')
+                i.bx.bx-user.icon
+              br
+              small#error-username
+            .input-group
+              .input-box
+                input.name(type='text' name='stagename' placeholder='Stage Name')
+                i.bx.bx-user.icon
+            .input-group
+              .input-box
+                input.name(type='email' name='useremail' placeholder='Email Address')
+                i.bx.bx-envelope.icon
+            .input-group
+              .input-box
+                input.name(type='password' name='passid' placeholder='Password')
+                i.bx.bx-key.icon
+            .input-group
+              .input-box(style='width: 50%;')
+                h4 Date Of Birth
+                input.dob(type='text' placeholder='DD')
+                input.dob(type='text' placeholder='MM')
+                input.dob(type='text' placeholder='YYYY')
+                br
+                small#error-dob
+              .input-box(style='width: 50%;')
+                h4 Gender
+                input#msex.radio(type='radio' name='gender' checked)
+                label(for='g1') Male
+                input#fsex.radio(type='radio' name='gender')
+                label(for='g2') Female
+                br
+                small#error-gender
+            .input-group
+              .input-box
+                h4 Payment Details
+                input#p1.radio(type='radio' name='pay' checked)
+                label(for='p1')
+                  span
+                    i.bx.bxl-mastercard
+                    | Credit Card
+                input#p2.radio(type='radio' name='pay')
+                label(for='p2')
+                  span
+                    i.bx.bxl-paypal
+                    | Paypal
+            .input-group
+              .input-box
+                input.name(type='tel' name='cardno' placeholder='Card Number')
+                i.bx.bx-credit-card.icon
+            .input-group
+              .input-box(style='width: 50%;')
+                input.name(type='tel' name='cardcvc' placeholder='Card CVC')
+                i.bx.bx-user.icon
+              .input-box(style='width: 45%; margin-left: 25px;')
+                select
+                  option 01 Jan
+                  option 01 Feb
+                  option 01 Mar
+                select
+                  option 2021
+                  option 2022
+                  option 2023
+            .input-group
+              .input-box
+                button#sub-btn(type='submit') SUBMIT
+                button#res-btn(type='reset') RESET
+            .input-group
+              .input-box(style='text-align: center; margin-left: 60px;')
+                h4#login-info Already have an account?
+                  span
+                    a.login-info(href='sign-in.html')   Log In
+    script(src='/Js/solo-login.js')
+    script(src='/routes/solo-route.js')
+    script(src='/models/soloModel.js')
