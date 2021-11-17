@@ -1,0 +1,113 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Login
+    meta(name='description' content='')
+    // Favicons
+    link(rel='icon' type='image/png' href='/Images/Favicons/icons8-earbud-headphones-100.png' sizes='50x50')
+    // Vendor CSS
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/css/bootstrap-5.1.0-dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/boxicons/css/boxicons.min.css')
+    // Solo-Login CSS
+    link(rel='stylesheet' href='/css/solo-login.css')
+  body
+    .row
+      .col-4
+        img(src='/Images/Main/African/africandance1.jpeg' width='400px')
+      .col-8
+        .wrapper
+          h2 Registration Form
+          form#regform(name='registration' method='POST' action='/reg/perf-login' enctype='multipart/form-data')
+            h4 Account
+            .input-group
+              .input-box
+                input.name(type='text' name='fullname' placeholder='Full Name')
+                i.bx.bx-user.icon
+              br
+              small#error-username
+            .input-group
+              .input-box
+                input.name(type='text' name='stagename' placeholder='Stage Name')
+                i.bx.bx-user.icon
+            .input-group
+              .input-box
+                input.name(type='email' name='email' placeholder='Email Address')
+                i.bx.bx-envelope.icon
+            .input-group
+              .input-box
+                input.name(type='password' name='passid' placeholder='Password')
+                i.bx.bx-key.icon
+            .input-group
+              h4 Role
+              .input-box
+                select#role(name='role')
+                  option(value='default' selected) Role
+                  option Comedian
+                  option Dance Troupe
+                  option Dramartist
+              br
+              small#error-role  
+            .row
+              .col-6
+                .input-group
+                  h4 Date Of Birth
+                  h6(style='color:grey; font-size:12px;') *Optional for Dance Troupe
+                  .input-box
+                    input.name(type='date' placeholder='' name='dob')
+                    i.bx.bx-calendar-plus.icon
+                    br
+                    small#error-dob
+              .col-6
+                .input-group
+                  h4 Gender 
+                  br
+                  h6(style='color:grey; font-size:12px; margin-left:12.6px;') *Optional for Dance Troupe
+                  .input-box
+                    input#g1.radio(type='radio' name='gender' value="Male")
+                    label(for='g1') Male
+                    input#g2.radio(type='radio' name='gender' value="Female")
+                    label(for='g2') Female
+                    br
+                    small#error-gender
+            .input-group
+                  h4 Number Of Members
+                  h6(style='color:grey; font-size:12px; padding:5px;') *Optional for Comedian
+                  .input-box
+                    input#members.name(type='number' name='members' placeholder='Members')
+                    i.bx.bx-user.icon
+                    br
+                    small#error-member
+            .input-group
+              h4 Profile Photo
+              .input-box
+                input.name(type='file' name='file' placeholder='Choose File')
+                i.bx.bx-photo-album.icon
+            .input-group
+              h4 Start Date
+              .input-box
+                input.name(type='date' name='date' placeholder='')
+                i.bx.bx-calendar-plus.icon
+            .input-group
+              h4 Contact Details
+              .input-box
+                input.name(type='tel' name='phoneno' placeholder='Phone Number')
+                i.bx.bx-phone.icon
+            .input-group
+              .input-box
+                input.name(type='tel' name='location' placeholder='Location')
+                i.bx.bx-location-plus.icon
+            .input-group
+              .input-box
+                button#sub-btn(type='submit') SUBMIT
+                button#res-btn(type='reset') RESET
+            .input-group
+              .input-box(style='text-align: center; margin-left: 60px;')
+                h4#login-info Already have an account?
+                  span
+                    a.login-info(href='/reg/sign-in')   Log In
+    script(src='/Js/perf-login.js')
+    script(src='/routes/perf-route.js')
+    script(src='/models/perfModel.js')

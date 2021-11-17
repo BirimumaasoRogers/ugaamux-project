@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <!-- Favicons-->
+    <link rel="icon" type="image/png" href="/Images/Favicons/icons8-earbud-headphones-100.png" sizes="50x50">
+    <!-- Vendor CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons/css/boxicons.min.css">
+    <!-- Solo-Login CSS-->
+    <link rel="stylesheet" href="/css/solo-login.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-4"><img src="/Images/Main/African/africandance1.jpeg" width="400px"></div>
+      <div class="col-8">
+        <div class="wrapper">
+          <h2>Registration Form</h2>
+          <form id="regform" name="registration" method="POST" action="/reg/perf-login" enctype="multipart/form-data">
+            <h4>Account</h4>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="text" name="fullname" placeholder="Full Name"><i class="bx bx-user icon"></i>
+              </div><br><small id="error-username"></small>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="text" name="stagename" placeholder="Stage Name"><i class="bx bx-user icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="email" name="email" placeholder="Email Address"><i class="bx bx-envelope icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="password" name="passid" placeholder="Password"><i class="bx bx-key icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <h4>Role</h4>
+              <div class="input-box">
+                <select id="role" name="role">
+                  <option value="default" selected>Role</option>
+                  <option>Comedian</option>
+                  <option>Dance Troupe</option>
+                  <option>Dramartist</option>
+                </select>
+              </div><br><small id="error-role"> </small>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="input-group">
+                  <h4>Date Of Birth</h4>
+                  <h6 style="color:grey; font-size:12px;">*Optional for Dance Troupe</h6>
+                  <div class="input-box">
+                    <input class="name" type="date" placeholder="" name="dob"><i class="bx bx-calendar-plus icon"></i><br><small id="error-dob"></small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="input-group">
+                  <h4>Gender </h4><br>
+                  <h6 style="color:grey; font-size:12px; margin-left:12.6px;">*Optional for Dance Troupe</h6>
+                  <div class="input-box">
+                    <input class="radio" id="g1" type="radio" name="gender" value="Male">
+                    <label for="g1">Male</label>
+                    <input class="radio" id="g2" type="radio" name="gender" value="Female">
+                    <label for="g2">Female</label><br><small id="error-gender"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <h4>Number Of Members</h4>
+              <h6 style="color:grey; font-size:12px; padding:5px;">*Optional for Comedian</h6>
+              <div class="input-box">
+                <input class="name" id="members" type="number" name="members" placeholder="Members"><i class="bx bx-user icon"></i><br><small id="error-member"></small>
+              </div>
+            </div>
+            <div class="input-group">
+              <h4>Profile Photo</h4>
+              <div class="input-box">
+                <input class="name" type="file" name="file" placeholder="Choose File"><i class="bx bx-photo-album icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <h4>Start Date</h4>
+              <div class="input-box">
+                <input class="name" type="date" name="date" placeholder=""><i class="bx bx-calendar-plus icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <h4>Contact Details</h4>
+              <div class="input-box">
+                <input class="name" type="tel" name="phoneno" placeholder="Phone Number"><i class="bx bx-phone icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="tel" name="location" placeholder="Location"><i class="bx bx-location-plus icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <button id="sub-btn" type="submit">SUBMIT</button>
+                <button id="res-btn" type="reset">RESET</button>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box" style="text-align: center; margin-left: 60px;">
+                <h4 id="login-info">Already have an account?<span><a class="login-info" href="/reg/sign-in">  Log In</a></span></h4>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/Js/perf-login.js"></script>
+    <script src="/routes/perf-route.js"></script>
+    <script src="/models/perfModel.js"></script>
+  </body>
+</html>

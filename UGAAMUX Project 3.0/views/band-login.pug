@@ -1,0 +1,92 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Login
+    meta(name='description' content='')
+    // Favicons
+    link(rel='icon' type='image/png' href='/Images/Favicons/icons8-earbud-headphones-100.png' sizes='50x50')
+    // Vendor CSS
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/css/bootstrap-5.1.0-dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/boxicons/css/boxicons.min.css')
+    // Solo-Login CSS
+    link(rel='stylesheet' href='/css/band-login.css')
+  body
+    .row
+      .col-4
+        img(src='/Images/Main/Sidebar-photo.jpeg' width='500px')
+      .col-8
+        .wrapper
+          h2 Registration Form
+          form#regform(name='registration' method='POST' action='/reg/band-login' enctype='multipart/form-data')
+            h4 Account
+            .input-group
+              .input-box
+                input.name(type='text' name='bandname' placeholder='Band Name')
+                i.bx.bx-music.icon
+            .input-group
+              .input-box
+                input.name(type='email' name='email' placeholder='Email Address')
+                i.bx.bx-envelope.icon
+            .input-group
+              .input-box
+                input.name(type='password' name='password' placeholder='Password')
+                i.bx.bx-key.icon
+            .input-group
+              h4 Role
+              .input-box
+                select#role(name='role')
+                  option(value='default' selected) Role
+                  option Band
+              br
+              small#error-role 
+            .row
+              .col-6
+                .input-group
+                  h4 Date Of Launch
+                  .input-box
+                    input.name(type='date' placeholder='date' name='launch')
+                    i.bx.bx-calendar-plus.icon
+                    br
+                    small#error-date
+              .col-6
+                .input-group
+                  h4 Number Of Members
+                  .input-box
+                    input#members.name(type='number' name='members' placeholder='Members')
+                    i.bx.bx-user.icon
+                    br
+                    small#error-member
+            .input-group
+              h4 Profile Photo
+              .input-box
+                input.name(type='file' name='file' placeholder='Choose File')
+                i.bx.bx-photo-album.icon
+            .input-group
+              h4 Contact Details
+              .input-box
+                input.name(type='tel' name='phoneno' placeholder='Phone Number')
+                i.bx.bx-phone.icon
+            .input-group
+              .input-box
+                input.name(type='tel' name='location' placeholder='Location')
+                i.bx.bx-location-plus.icon
+            .input-group
+              h4 Music Type
+              .input-box
+                input.name(type='text' name='genre' placeholder='Genre')
+                i.bx.bx-album.icon
+                br
+                small#error-genre
+            .input-group
+              .input-box
+                button#sub-btn(type='submit') SUBMIT
+                button#res-btn(type='reset') RESET
+            .input-group
+              .input-box(style='text-align: center; margin-left: 60px;')
+                h4#login-info Already have an account?
+                  span
+                    a.login-info(href='/reg/sign-in')   Log In
+    script(src='/Js/band-login.js')

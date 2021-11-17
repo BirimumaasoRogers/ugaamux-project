@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign In</title>
+    <meta name="description" content="">
+    <!-- Favicons-->
+    <link rel="icon" type="image/png" href="/Images/Favicons/icons8-earbud-headphones-100.png" sizes="50x50">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="/css/sign-in.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-6"><img src="/Images/other/role3.jpeg" width="600px"></div>
+      <div class="col-6">
+        <div class="wrapper">
+          <h2>Sign In</h2>
+          <form id="signform" name="registration" method="POST" action="/reg/sign-in">
+            <h4>Account</h4>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="email" name="email" placeholder="User Email"><i class="bx bx-envelope icon"></i>
+              </div><br><small id="error-email"></small>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input class="name" type="password" name="password" placeholder="Password"><i class="bx bx-key icon"></i>
+              </div><br><small id="error-password"></small>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <button id="sub-btn" type="submit">Sign In</button>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-icon">
+                <h3>Or sign Up Using:</h3>
+                <ul><a href="http://facebook.com">
+                    <li><i class="bx bxl-facebook-circle"></i></li></a><a href="http://google.com">
+                    <li><i class="bx bxl-google"></i></li></a><a href="http://apple.com">
+                    <li><i class="bx bxl-apple"></i></li></a></ul>
+              </div>
+            </div>
+          </form>
+          <div class="container">
+            <h4>| ©Copyright:UGAAMUX 2021 |</h4>
+          </div>
+        </div>
+      </div>
+      <script src="/Js/sign-in.js" async defer></script>
+    </div>
+  </body>
+</html>

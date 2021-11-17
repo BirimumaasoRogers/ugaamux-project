@@ -1,0 +1,207 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewpoint' content='width=device')
+    title Artist
+    style.
+      html {
+      font-family: sans-serif;
+      color: #333;
+      }
+    // Favicons
+    link(rel='icon' type='image/png' href='/Images/Favicons/icons8-earbud-headphones-100.png' sizes='50x50')
+    // --- Google Fonts ---
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap' rel='stylesheet')
+    //
+      ---- Vendor CSS ------>
+      <link href="/assets/Vendors/animate.css/animate.min.css" rel="stylesheet">
+      <link href="/css/boxicons/css/boxicons.css" rel="stylesheet">
+      <link rel="stylesheet" href="/css/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/assets/Vendors/bootstrap-icons/font/bootstrap-icons.css">
+      <link href="/assets/Vendors/aos-master/dist/aos.css" rel="stylesheet">
+      <link href="/assets/Vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!----- Landing CSS ---
+    link(rel='stylesheet' href='/css/dynamic.css')
+  body
+    nav#nav.navbar.navbar-expand-lg
+      .container-fluid
+        a.navbar-brand(href='#')
+          // <img class="logo" src="/Images/logo/UGGAMUX-logo.png">
+          | UGAAMUX
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #nav-list
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0(style='float: left;')
+              li.nav-item
+                a.nav-link.active(aria-current='page' href='#') Home
+              li.nav-item
+                a.nav-link.active(aria-current='page' href='#about') About Us
+              li.nav-item
+                a.nav-link.active(aria-current='page' href='#') Services
+              li.nav-item
+                a.nav-link(href='#contact') Contact Us
+              li.nav-item.dropdown(style='right: 0;')
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                  i.bx.bx-user-circle.icon(style='font-size: 20px;')
+                  span   Account
+                ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                  li
+                    a.dropdown-item(href='#' style='color: gray;') User Profile
+                  li
+                    a.dropdown-item(href='#' style='color: gray;') Privacy
+                  li
+                    hr.dropdown-divider
+                  li
+                    a.dropdown-item(href='#' style='color: gray;')
+                      i.bx.bx-cog
+                      | Settings
+                  li
+                    a.dropdown-item(href='/logout' style='color: gray;')
+                      i.bx.bx-log-out
+                      | Logout
+    main
+      // Hero Section
+      .hero-section
+        section#hero
+          .row
+            .col-7
+              .hero-container(data-aos='fade-up' data-aos-duration='3000' style='margin-right:400px')
+                h1 Welcome #{artist.stagename}
+                h2 Feel at home you're in your own space now.
+            .col-5(data-aos='fade-left')
+              img(src='/'+artist.file style='width:500px; height:500px; margin-top:100px')
+      // End of Hero Section
+      // ======= User Info Section =======
+      section#specials.specials(style='background:black')
+        .container(data-aos='fade-up')
+          .section-title
+            h2 User-Info
+            p Check Out Your Info
+          .row(data-aos='fade-up' data-aos-delay='100')
+            .col-lg-3
+              ul.nav.nav-tabs.flex-column
+                li.nav-item
+                  a.nav-link.active.show(data-bs-toggle='tab' href='#tab-1') User Data
+                li.nav-item
+                  a.nav-link(data-bs-toggle='tab' href='#tab-2') User Music
+            .col-lg-9.mt-4.mt-lg-0
+              .tab-content
+                #tab-1.tab-pane.active.show
+                  .row
+                    .col-lg-8.details.order-2.order-lg-1
+                      h3 Below is your User Data
+                      table.table.table-hover.table-dark(style='background:black')
+                        thead
+                          tr
+                            th(scope='col') Full Name
+                            th(scope='col') Stage
+                            th(scope='col') D.O.B
+                            th(scope='col') Gender
+                            th(scope='col') Location
+                        tbody
+                          tr
+                            td #{artist.fullname}
+                            td #{artist.stagename}
+                            td #{artist.dob}
+                            td #{artist.gender}
+                            td #{artist.location}
+                    .col-lg-4.text-center.order-1.order-lg-2
+                      img.img-fluid(src='/'+artist.file alt='')
+                #tab-2.tab-pane
+                  .row
+                    .col-lg-8.details.order-2.order-lg-1
+                      h3 Your Music
+                      .input-box
+                        input.name(type='file' name='music' placeholder='Upload')
+                        i.bx.bx-upload
+                    .col-lg-4.text-center.order-1.order-lg-2
+                      img.img-fluid(src='/'+artist.file alt='')
+    footer#footer
+      .footer-top
+        .container
+          .row
+            .col-lg-3.col-md-6
+              .footer-info
+                h3 UGAAMUX
+                p
+                  | Luthuli Rise
+                  br
+                  | Plot 535022, UG
+                  br
+                  br
+                  strong Phone:
+                  | +256 770 200 973
+                  br
+                  strong Email:
+                  | uncc.ugaamux@gmail.com.com
+                  br
+                .social-links.mt-3
+                  a.twitter(href='#')
+                    i.bx.bxl-twitter
+                  a.facebook(href='#')
+                    i.bx.bxl-facebook
+                  a.instagram(href='#')
+                    i.bx.bxl-instagram
+                  a.google-plus(href='#')
+                    i.bx.bxl-skype
+                  a.linkedin(href='#')
+                    i.bx.bxl-linkedin
+            .col-lg-2.col-md-6.footer-links
+              h4 Useful Links
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Home
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') About us
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Services
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Terms of service
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Privacy policy
+            .col-lg-3.col-md-6.footer-links
+              h4 Our Services
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Registration
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Marketing
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Product Management
+            .col-lg-4.col-md-6.footer-newsletter
+              h4 Our Newsletter
+              p Want to stay updated? Join our newsletter and get weekly updates
+              form(action='' method='post')
+                input(type='email' name='email')
+                input(type='submit' value='Subscribe')
+      .container
+        .copyright
+          | &copy; Copyright [2021]
+          strong
+            span UGAAMUX
+          | . All Rights Reserved
+        .credits
+          | Designed by
+          a(href='#') Birimumaaso Rogers
+    // Vendor Js Files
+    script(src='/css/bootstrap-5.1.0-dist/js/bootstrap.min.js')
+    script(src='/assets/Vendors/aos-master/dist/aos.js')
+    script(src='/assets/Vendors/isotope-layout/isotope.pkgd.min.js')
+    script(src='/assets/Vendors/swiper/swiper-bundle.min.js')
+    script(src='/assets/Vendors/purecounter/purecounter-vanilla.js')
+    // Dynamic Js
+    script(src='/Js/dynamic.js')
+    script.
+      AOS.init();

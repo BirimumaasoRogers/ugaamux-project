@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Sign In
+    meta(name='description' content='')
+    // Favicons
+    link(rel='icon' type='image/png' href='/Images/Favicons/icons8-earbud-headphones-100.png' sizes='50x50')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/css/bootstrap-5.1.0-dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/boxicons/css/boxicons.css')
+    link(rel='stylesheet' href='/css/sign-in.css')
+  body
+    .row
+      .col-6
+        img(src='/Images/other/role3.jpeg' width='600px')
+      .col-6
+        .wrapper
+          h2 Sign In
+          form#signform(name='registration' method='POST' action='/reg/sign-in')
+            h4 Account
+            //- .input-group
+            //-   .input-box
+            //-     input.name(type='text' name='artistID' placeholder='Artist ID')
+            //-     i.bx.bx-user.icon
+            //-   br
+            //-   small#error-username
+            .input-group
+              .input-box
+                input.name(type='email' name='email' placeholder='User Email')
+                i.bx.bx-envelope.icon
+              br
+              small#error-email
+            .input-group
+              .input-box
+                input.name(type='password' name='password' placeholder='Password')
+                i.bx.bx-key.icon
+              br
+              small#error-password
+            .input-group
+              .input-box
+                button#sub-btn(type='submit') Sign In
+            .input-group
+              .input-icon
+                h3 Or sign Up Using:
+                ul
+                  a(href='http://facebook.com')
+                    li
+                      i.bx.bxl-facebook-circle
+                  a(href='http://google.com')
+                    li
+                      i.bx.bxl-google
+                  a(href='http://apple.com')
+                    li
+                      i.bx.bxl-apple
+          .container
+            h4 | ©Copyright:UGAAMUX 2021 |
+      script(src='/Js/sign-in.js' async defer)
